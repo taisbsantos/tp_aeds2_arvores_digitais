@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tais/CLionProjects/aplicacao_arvores_digitais/main.c
+stdio.h
+-
+tst.h
+/home/tais/CLionProjects/aplicacao_arvores_digitais/tst.h
+
+/home/tais/CLionProjects/aplicacao_arvores_digitais/tst.c
+tst.h
+/home/tais/CLionProjects/aplicacao_arvores_digitais/tst.h
+stdio.h
+-
+stdlib.h
+-
+
+/home/tais/CLionProjects/aplicacao_arvores_digitais/tst.h
+
