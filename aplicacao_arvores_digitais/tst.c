@@ -3,6 +3,7 @@
 #include "tst.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include<stdbool.h>
 #define MAX 50
 
 // A utility function to create a new ternary search tree node
@@ -97,3 +98,74 @@ int searchTST(struct Node *root, char *word)
     }
 }
 
+bool isLastNode(struct Node* root)
+{
+    for (int i = 0; i < ALPHABET_SIZE; i++)
+        if (root->children[i])
+            return 0;
+    return 1;
+}
+void auto_complete(struct Node *root, char *atual_prefixo){
+
+    if(root->isEndOfString)
+        printf("%s\n",atual_prefixo);
+
+    if(isLastNode(root))
+        return;
+
+    for (int i = 0; i < ALPHABET_SIZE; i++)
+    {
+        if (root->children[i])
+        {
+            // append current character to currPrefix string
+            atual_prefixo.push_back(97 + i);
+
+            // recur over the rest
+            auto_complete(root->children[i],atual_prefixo);
+        }
+    }
+}
+int print_auto_complete(Node *root, const char *prefixo){
+    struct Node* pCrawl = root;
+    const char *prefix;
+    // Check if prefix is present and find the
+    // the node (of last level) with last character
+    // of given string.
+    int level;
+    int n = prefixo.length();
+    for (level = 0; level < n; level++)
+    {
+        int index = prefixo[level]-48;
+
+        // no string in the Trie has this prefix
+        if (!pCrawl->children[index])
+            return 0;
+
+        pCrawl = pCrawl->children[index];
+    }
+
+    // If prefix is present as a word.
+    bool isWord = (pCrawl->isEndOfString == true);
+
+    // If prefix is last node of tree (has no
+    // children)
+    bool isLast = isLastNode(pCrawl);
+
+    // If prefix is present as a word, but
+    // there is no subtree below the last
+    // matching node.
+    if (isWord && isLast)
+    {
+        printf("%s",prefixo);
+        return -1;
+    }
+
+    // If there are are nodes below last
+    // matching character.
+    if (!isLast)
+    {
+        prefix = prefixo;
+        auto_complete(pCrawl, prefix);
+        return 1;
+    }
+}

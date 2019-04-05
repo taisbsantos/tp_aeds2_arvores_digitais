@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/tais/CLionProjects/aplicacao_arvores_digitais/main.c" "/home/tais/CLionProjects/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o"
-  "/home/tais/CLionProjects/aplicacao_arvores_digitais/tst.c" "/home/tais/CLionProjects/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/tst.c.o"
+  "/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c" "/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o"
+  "/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.c" "/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/tst.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

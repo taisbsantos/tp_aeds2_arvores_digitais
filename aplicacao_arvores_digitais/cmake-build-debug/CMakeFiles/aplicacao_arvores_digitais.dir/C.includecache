@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/tais/CLionProjects/aplicacao_arvores_digitais/main.c
+/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c
 stdio.h
 -
 tst.h
-/home/tais/CLionProjects/aplicacao_arvores_digitais/tst.h
+/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.h
 
-/home/tais/CLionProjects/aplicacao_arvores_digitais/tst.c
+/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.c
 tst.h
-/home/tais/CLionProjects/aplicacao_arvores_digitais/tst.h
+/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.h
 stdio.h
 -
 stdlib.h
 -
 
-/home/tais/CLionProjects/aplicacao_arvores_digitais/tst.h
+/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.h
 

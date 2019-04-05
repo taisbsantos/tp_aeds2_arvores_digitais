@@ -7,9 +7,6 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "../CMakeLists.txt"
-  "CMakeFiles/3.13.2/CMakeCCompiler.cmake"
-  "CMakeFiles/3.13.2/CMakeSystem.cmake"
   "/home/tais/Documents/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCInformation.cmake"
   "/home/tais/Documents/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCommonLanguageInclude.cmake"
   "/home/tais/Documents/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
@@ -27,6 +24,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/tais/Documents/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/Platform/Linux.cmake"
   "/home/tais/Documents/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/Platform/UnixPaths.cmake"
   "/home/tais/Documents/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/ProcessorCount.cmake"
+  "../CMakeLists.txt"
+  "CMakeFiles/3.13.2/CMakeCCompiler.cmake"
+  "CMakeFiles/3.13.2/CMakeSystem.cmake"
   )
 
 # The corresponding makefile is:

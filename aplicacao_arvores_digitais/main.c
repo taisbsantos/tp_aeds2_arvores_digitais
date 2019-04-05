@@ -16,6 +16,13 @@ int main()
     searchTST(root, "cats")? printf("Found\n"): printf("Not Found\n");
     searchTST(root, "bu")? printf("Found\n"): printf("Not Found\n");
     searchTST(root, "cat")? printf("Found\n"): printf("Not Found\n");
+    int comp = print_auto_complete(root, "hel");
+
+    if (comp == -1)
+        printf("No other strings found with this prefix\n") ;
+
+    else if (comp == 0)
+        printf("No string found with this prefix\n");
 
     return 0;
 }

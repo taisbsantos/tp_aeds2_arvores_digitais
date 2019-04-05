@@ -1,3 +1,0 @@
-/home/tais/CLionProjects/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/tais/CLionProjects/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir
-/home/tais/CLionProjects/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/edit_cache.dir
