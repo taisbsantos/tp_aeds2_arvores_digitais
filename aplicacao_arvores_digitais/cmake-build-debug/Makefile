@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/tais/Documents/clion-2018.3.4/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /opt/clion-2019.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/tais/Documents/clion-2018.3.4/bin/cmake/linux/bin/cmake -E remove -f
+RM = /opt/clion-2019.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais
+CMAKE_SOURCE_DIR = /media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug
+CMAKE_BINARY_DIR = /media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/reposi
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/tais/Documents/clion-2018.3.4/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/clion-2019.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/tais/Documents/clion-2018.3.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/opt/clion-2019.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles /media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles /media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b3/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,6 +150,60 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/aplicacao_arvores_digitais.dir/build.make CMakeFiles/aplicacao_arvores_digitais.dir/main.c.s
 .PHONY : main.c.s
 
+patricia.o: patricia.c.o
+
+.PHONY : patricia.o
+
+# target to build an object file
+patricia.c.o:
+	$(MAKE) -f CMakeFiles/aplicacao_arvores_digitais.dir/build.make CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o
+.PHONY : patricia.c.o
+
+patricia.i: patricia.c.i
+
+.PHONY : patricia.i
+
+# target to preprocess a source file
+patricia.c.i:
+	$(MAKE) -f CMakeFiles/aplicacao_arvores_digitais.dir/build.make CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.i
+.PHONY : patricia.c.i
+
+patricia.s: patricia.c.s
+
+.PHONY : patricia.s
+
+# target to generate assembly for a file
+patricia.c.s:
+	$(MAKE) -f CMakeFiles/aplicacao_arvores_digitais.dir/build.make CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.s
+.PHONY : patricia.c.s
+
+pilha.o: pilha.c.o
+
+.PHONY : pilha.o
+
+# target to build an object file
+pilha.c.o:
+	$(MAKE) -f CMakeFiles/aplicacao_arvores_digitais.dir/build.make CMakeFiles/aplicacao_arvores_digitais.dir/pilha.c.o
+.PHONY : pilha.c.o
+
+pilha.i: pilha.c.i
+
+.PHONY : pilha.i
+
+# target to preprocess a source file
+pilha.c.i:
+	$(MAKE) -f CMakeFiles/aplicacao_arvores_digitais.dir/build.make CMakeFiles/aplicacao_arvores_digitais.dir/pilha.c.i
+.PHONY : pilha.c.i
+
+pilha.s: pilha.c.s
+
+.PHONY : pilha.s
+
+# target to generate assembly for a file
+pilha.c.s:
+	$(MAKE) -f CMakeFiles/aplicacao_arvores_digitais.dir/build.make CMakeFiles/aplicacao_arvores_digitais.dir/pilha.c.s
+.PHONY : pilha.c.s
+
 tst.o: tst.c.o
 
 .PHONY : tst.o
@@ -189,6 +243,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... patricia.o"
+	@echo "... patricia.i"
+	@echo "... patricia.s"
+	@echo "... pilha.o"
+	@echo "... pilha.i"
+	@echo "... pilha.s"
 	@echo "... tst.o"
 	@echo "... tst.i"
 	@echo "... tst.s"

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o"
   "CMakeFiles/aplicacao_arvores_digitais.dir/tst.c.o"
+  "CMakeFiles/aplicacao_arvores_digitais.dir/pilha.c.o"
+  "CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o"
   "aplicacao_arvores_digitais.pdb"
   "aplicacao_arvores_digitais"
 )

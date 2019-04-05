@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include<stdbool.h>
+#include <string.h>
 #define MAX 50
 
 // A utility function to create a new ternary search tree node
@@ -98,14 +99,16 @@ int searchTST(struct Node *root, char *word)
     }
 }
 
-bool isLastNode(struct Node* root)
+//NOSSA ADAPTACAO DO AUTO COMPLETE
+
+bool isLastNode(struct Node *root)
 {
     for (int i = 0; i < ALPHABET_SIZE; i++)
         if (root->children[i])
             return 0;
     return 1;
 }
-void auto_complete(struct Node *root, char *atual_prefixo){
+void auto_complete(struct Node *root, char *atual_prefixo,TipoPilha *pilha_arv){
 
     if(root->isEndOfString)
         printf("%s\n",atual_prefixo);
@@ -118,21 +121,24 @@ void auto_complete(struct Node *root, char *atual_prefixo){
         if (root->children[i])
         {
             // append current character to currPrefix string
-            atual_prefixo.push_back(97 + i);
+            Empilha(atual_prefixo,pilha_arv);
+
+
+            //atual_prefixo.push_back(97 + i);
 
             // recur over the rest
             auto_complete(root->children[i],atual_prefixo);
         }
     }
 }
-int print_auto_complete(Node *root, const char *prefixo){
+int print_auto_complete(struct Node *root, char *prefixo, TipoPilha *pilha_arv){
     struct Node* pCrawl = root;
     const char *prefix;
     // Check if prefix is present and find the
     // the node (of last level) with last character
     // of given string.
     int level;
-    int n = prefixo.length();
+    int n = strlen(prefixo);
     for (level = 0; level < n; level++)
     {
         int index = prefixo[level]-48;

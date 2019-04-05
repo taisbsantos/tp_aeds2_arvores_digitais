@@ -2,6 +2,7 @@
 // A node of ternary search tree
 #define ALPHABET_SIZE 26
 #include<stdbool.h>
+#include "pilha.h"
 struct Node
 {
     char data;
@@ -16,6 +17,6 @@ void insert(struct Node** root, char *word);
 void traverseTSTUtil(struct Node* root, char* buffer, int depth);
 void traverseTST(struct Node* root);
 int searchTST(struct Node *root, char *word);
-bool isLastNode(struct TrieNode* root);
-void auto_complete(struct Node *string,char *atual_prefixo);
-int print_auto_complete(Node *root, const char *prefixo);
+bool isLastNode(struct Node* root);
+void auto_complete(struct Node *cadeia_caracter,char *atual_prefixo,TipoPilha *pilha_arv);
+int print_auto_complete( struct Node *root,  char *prefixo,TipoPilha *pilha_arv);
