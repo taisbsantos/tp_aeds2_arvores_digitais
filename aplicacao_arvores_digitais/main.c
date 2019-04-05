@@ -4,7 +4,7 @@
 int main()
 {
     struct Node *root = NULL;
-    TipoPilha *pilha_arv;
+    TipoPilha pilha_arv;
     TipoItem item;
 
     insert(&root, "cat");
@@ -19,10 +19,10 @@ int main()
     searchTST(root, "bu")? printf("Found\n"): printf("Not Found\n");
     searchTST(root, "cat")? printf("Found\n"): printf("Not Found\n");
 
-    FPVazia(pilha_arv);
+    FPVazia(&pilha_arv);
     strcpy(item.prefixo,"ca");
 
-    int comp = print_auto_complete(root,item,pilha_arv);
+    int comp = print_auto_complete(root,item,&pilha_arv);
 
     if (comp == -1)
         printf("No other strings found with this prefix\n") ;

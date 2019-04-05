@@ -12,7 +12,9 @@
 
 
 void FPVazia(TipoPilha *Pilha)
-{ Pilha->Topo = (TipoCelula*) malloc(sizeof(TipoCelula));
+{
+
+    Pilha->Topo = (TipoCelula*) malloc(sizeof(TipoCelula));
     Pilha->Fundo = Pilha->Topo;
     Pilha->Topo->Prox = NULL;
     Pilha->Tamanho = 0;
