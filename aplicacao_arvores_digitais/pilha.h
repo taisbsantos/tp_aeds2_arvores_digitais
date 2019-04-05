@@ -3,7 +3,7 @@
 //
 
 
-typedef struct {
+typedef struct TipoItem{
     char prefixo[100];
     /* outros componentes */
 }TipoItem;
@@ -17,7 +17,4 @@ typedef struct {
 } TipoPilha;
 
 void FPVazia(TipoPilha *Pilha);
-int Vazia(TipoPilha Pilha);
 void Empilha(TipoItem x, TipoPilha *Pilha);
-void Desempilha(TipoPilha *Pilha, TipoItem *Item);
-int Tamanho(TipoPilha Pilha);

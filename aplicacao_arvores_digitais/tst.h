@@ -18,5 +18,5 @@ void traverseTSTUtil(struct Node* root, char* buffer, int depth);
 void traverseTST(struct Node* root);
 int searchTST(struct Node *root, char *word);
 bool isLastNode(struct Node* root);
-void auto_complete(struct Node *cadeia_caracter,char *atual_prefixo,TipoPilha *pilha_arv);
-int print_auto_complete( struct Node *root,  char *prefixo,TipoPilha *pilha_arv);
+void auto_complete(struct Node *cadeia_caracter,TipoItem x,TipoPilha *pilha_arv);
+int print_auto_complete( struct Node *root, TipoItem x,TipoPilha *pilha_arv);

@@ -108,10 +108,10 @@ bool isLastNode(struct Node *root)
             return 0;
     return 1;
 }
-void auto_complete(struct Node *root, char *atual_prefixo,TipoPilha *pilha_arv){
-
+void auto_complete(struct Node *root, TipoItem x,TipoPilha *pilha_arv){
+printf("entrei no auto complete");
     if(root->isEndOfString)
-        printf("%s\n",atual_prefixo);
+        printf("%s\n",x.prefixo);
 
     if(isLastNode(root))
         return;
@@ -121,27 +121,25 @@ void auto_complete(struct Node *root, char *atual_prefixo,TipoPilha *pilha_arv){
         if (root->children[i])
         {
             // append current character to currPrefix string
-            Empilha(atual_prefixo,pilha_arv);
-
-
+            Empilha(x,pilha_arv);
             //atual_prefixo.push_back(97 + i);
 
             // recur over the rest
-            auto_complete(root->children[i],atual_prefixo);
+            auto_complete(root->children[i],x,pilha_arv);
         }
     }
 }
-int print_auto_complete(struct Node *root, char *prefixo, TipoPilha *pilha_arv){
+int print_auto_complete(struct Node *root, TipoItem x, TipoPilha *pilha_arv){
     struct Node* pCrawl = root;
     const char *prefix;
     // Check if prefix is present and find the
     // the node (of last level) with last character
     // of given string.
     int level;
-    int n = strlen(prefixo);
+    int n = strlen(x.prefixo);
     for (level = 0; level < n; level++)
     {
-        int index = prefixo[level]-48;
+        int index = x.prefixo[level]-48;
 
         // no string in the Trie has this prefix
         if (!pCrawl->children[index])
@@ -162,7 +160,7 @@ int print_auto_complete(struct Node *root, char *prefixo, TipoPilha *pilha_arv){
     // matching node.
     if (isWord && isLast)
     {
-        printf("%s",prefixo);
+        printf("%s",x.prefixo);
         return -1;
     }
 
@@ -170,8 +168,9 @@ int print_auto_complete(struct Node *root, char *prefixo, TipoPilha *pilha_arv){
     // matching character.
     if (!isLast)
     {
-        prefix = prefixo;
-        auto_complete(pCrawl, prefix);
+        prefix = x.prefixo;
+        auto_complete(pCrawl, x,pilha_arv);
         return 1;
     }
 }
+

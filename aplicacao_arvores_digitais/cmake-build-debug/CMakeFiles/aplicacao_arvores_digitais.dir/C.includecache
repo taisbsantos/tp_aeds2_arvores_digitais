@@ -6,23 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/pilha.h
-
-/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.c
-tst.h
-/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.h
+/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c
 stdio.h
 -
-stdlib.h
--
-stdbool.h
--
+tst.h
+/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.h
 string.h
 -
 
-/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.h
+/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/pilha.h
+
+/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.h
 stdbool.h
 -
 pilha.h
-/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/pilha.h
+/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/pilha.h
 

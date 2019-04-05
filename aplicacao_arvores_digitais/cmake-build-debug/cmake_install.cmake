@@ -1,4 +1,4 @@
-# Install script for directory: /media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais
+# Install script for directory: /media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/media/tais/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

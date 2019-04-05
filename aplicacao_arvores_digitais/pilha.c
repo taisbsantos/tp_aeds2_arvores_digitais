@@ -18,11 +18,10 @@ void FPVazia(TipoPilha *Pilha)
     Pilha->Tamanho = 0;
 }
 
-int Vazia(TipoPilha Pilha)
-{ return (Pilha.Topo == Pilha.Fundo); }
 
 void Empilha(TipoItem x, TipoPilha *Pilha)
 {
+    printf("oiii");
     TipoCelula* Aux;
     Aux = (TipoCelula*) malloc(sizeof(TipoCelula));
     Pilha->Topo->Item = x;
@@ -31,15 +30,4 @@ void Empilha(TipoItem x, TipoPilha *Pilha)
     Pilha->Tamanho++;
 }
 
-void Desempilha(TipoPilha *Pilha, TipoItem *Item)
-{ TipoCelula* q;
-    if (Vazia(*Pilha)) { printf("Erro: lista vazia\n"); return; }
-    q = Pilha->Topo;
-    Pilha->Topo = q->Prox;
-    *Item = q->Prox->Item;
-    free(q);  Pilha->Tamanho--;
-}
-
-int Tamanho(TipoPilha Pilha)
-{ return (Pilha.Tamanho); }
 
