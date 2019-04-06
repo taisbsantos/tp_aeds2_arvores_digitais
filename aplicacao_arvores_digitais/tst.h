@@ -3,20 +3,14 @@
 #define ALPHABET_SIZE 26
 #include<stdbool.h>
 #include "pilha.h"
-struct Node
-{
-    char data;
+struct node {
+    int data;
+    struct node *array[26];
+};
 
-    // True if this character is last character of one of the words
-    unsigned isEndOfString: 1;
-    struct Node *left, *eq, *right,*children[ALPHABET_SIZE];
-}Node;
 
-struct Node* newNode(char data);
-void insert(struct Node** root, char *word);
-void traverseTSTUtil(struct Node* root, char* buffer, int depth);
-void traverseTST(struct Node* root);
-int searchTST(struct Node *root, char *word);
-bool isLastNode(struct Node* root);
-void auto_complete(struct Node *cadeia_caracter,TipoItem x,TipoPilha *pilha_arv);
-int print_auto_complete( struct Node *root, TipoItem x,TipoPilha *pilha_arv);
+struct node* new_node(struct node *h);
+struct node* insert(struct node *h, char *c, int value);
+int dfs(struct node *h, char *dat);
+void search(struct node *h, char *s, char *dat);
+struct node* read_keys(struct node *h, char *file);

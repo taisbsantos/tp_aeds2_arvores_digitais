@@ -23,7 +23,6 @@ void FPVazia(TipoPilha *Pilha)
 
 void Empilha(TipoItem x, TipoPilha *Pilha)
 {
-    printf("oiii");
     TipoCelula* Aux;
     Aux = (TipoCelula*) malloc(sizeof(TipoCelula));
     Pilha->Topo->Item = x;

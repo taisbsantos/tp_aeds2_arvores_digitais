@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c" "/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o"
-  "/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c" "/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o"
-  "/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/pilha.c" "/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/pilha.c.o"
-  "/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.c" "/media/root/fdaf8709-4bc3-475c-bb76-b13eb4a2da7b/tais/repositorios/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/tst.c.o"
+  "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c" "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o"
+  "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c" "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o"
+  "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/pilha.c" "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/pilha.c.o"
+  "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.c" "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/tst.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
