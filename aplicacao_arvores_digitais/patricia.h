@@ -5,22 +5,24 @@
 typedef enum {
     Interno, Externo
 } TipoNo;
-typedef struct TipoPatNo* TipoArvore;
+
 typedef struct TipoPatNo {
     TipoNo nt;
     union {
         struct {
             int posicao;
             char Index;
-            TipoArvore Esq, Dir;
+            struct TipoPatNo *Esq, *Dir;
         } NInterno ;
 char Chave ;
     } NO;
 } TipoPatNo;
+
+void inicializa_pat(TipoPatNo **no);
 char Bit(char i, char k);
-short EExterno(TipoArvore p);
-TipoArvore CriaNoInt(int i, TipoArvore *Esq,  TipoArvore *Dir);
-TipoArvore CriaNoExt(char k);
-void Pesquisa(char k, TipoArvore t);
-TipoArvore InsereEntre(char k, TipoArvore *t, int i);
-TipoArvore Insere(char k, TipoArvore *t);
+short EExterno(TipoPatNo ** p);
+TipoPatNo * CriaNoInt(int i, TipoPatNo **Esq,  TipoPatNo **Dir);
+TipoPatNo * CriaNoExt(char k);
+TipoPatNo * InsereEntre(char *k, TipoPatNo **t, int i);
+TipoPatNo * Insere(char *k, TipoPatNo **t);
+void Pesquisa(char *k, TipoPatNo **t);

@@ -3,6 +3,9 @@
 
 CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o
  /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c
+ /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.h
+ /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/pilha.h
+ /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.h
 CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o
  /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c
  /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.h
@@ -10,4 +13,6 @@ CMakeFiles/aplicacao_arvores_digitais.dir/pilha.c.o
  /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/pilha.c
  /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/pilha.h
 CMakeFiles/aplicacao_arvores_digitais.dir/tst.c.o
+ /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/pilha.h
  /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.c
+ /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.h

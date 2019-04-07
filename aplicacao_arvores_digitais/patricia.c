@@ -4,7 +4,9 @@
 #define D 8   /* depende de TipoChave */
 
 #include "patricia.h"
-
+void inicializa_pat(TipoPatNo **no){
+    *no=NULL;
+}
 char Bit(char i, char k)
 { /* Retorna o i-esimo bit da chave k a partir da esquerda */
     int  c, j;
@@ -16,38 +18,38 @@ char Bit(char i, char k)
     }
 }
 
-short EExterno(TipoArvore p)
+short EExterno(TipoPatNo ** p)
 { /* Verifica se p^ e nodo externo */
-    return (p->nt == Externo);
+    return( (*p)->nt == Externo);
 }
 
-TipoArvore CriaNoInt(int i, TipoArvore *Esq,  TipoArvore *Dir)
-{ TipoArvore p;
-    p = (TipoArvore)malloc(sizeof(TipoPatNo));
+TipoPatNo * CriaNoInt(int i, TipoPatNo **Esq,  TipoPatNo **Dir)
+{ TipoPatNo * p;
+    p = (TipoPatNo *)malloc(sizeof(TipoPatNo));
     p->nt = Interno; p->NO.NInterno.Esq = *Esq;
     p->NO.NInterno.Dir = *Dir; p->NO.NInterno.Index = i; return p;
 }
 
-TipoArvore CriaNoExt(char k)
-{ TipoArvore p;
-    p = (TipoArvore)malloc(sizeof(TipoPatNo));
+TipoPatNo * CriaNoExt(char k)
+{ TipoPatNo * p;
+    p = (TipoPatNo *)malloc(sizeof(TipoPatNo));
     p->nt = Externo; p->NO.Chave = k; return p;
 }
 
-void Pesquisa(char k, TipoArvore t)
+void Pesquisa(char *k, TipoPatNo **t)
 { if (EExterno(t))
-    { if (k == t->NO.Chave)
+    { if (k == (*t)->NO.Chave)
             printf("Elemento encontrado\n");
         else printf("Elemento nao encontrado\n");
         return;
     }
-    if (Bit(t->NO.NInterno.Index, k) == 0)
-        Pesquisa(k, t->NO.NInterno.Esq);
-    else Pesquisa(k, t->NO.NInterno.Dir);
+    if (Bit((*t)->NO.NInterno.Index, k) == 0)
+        Pesquisa(k, (*t)->NO.NInterno.Esq);
+    else Pesquisa(k, (*t)->NO.NInterno.Dir);
 }
 
-TipoArvore InsereEntre(char k, TipoArvore *t, int i)
-{ TipoArvore p;
+TipoPatNo * InsereEntre(char *k, TipoPatNo **t, int i)
+{ TipoPatNo * p;
     if (EExterno(*t) || i < (*t)->NO.NInterno.Index)
     { /* cria um novo no externo */
         p = CriaNoExt(k);
@@ -64,18 +66,19 @@ TipoArvore InsereEntre(char k, TipoArvore *t, int i)
     }
 }
 
-TipoArvore Insere(char k, TipoArvore *t)
+TipoPatNo *  Insere(char *k, TipoPatNo **t)
 {
-    TipoArvore p;
+    TipoPatNo *  p;
     int i;
     if (*t == NULL)
         return (CriaNoExt(k));
     else
-    { p = *t;
+    {
+        p = *t;
         while (!EExterno(p))
         { if (Bit(p->NO.NInterno.Index, k) == 1)
-                p = p->NO.NInterno.Dir;
-            else p = p->NO.NInterno.Esq;
+               p = p->NO.NInterno.Dir;
+          else p = p->NO.NInterno.Esq;
         }
         /* acha o primeiro bit diferente */
         i = 1;
