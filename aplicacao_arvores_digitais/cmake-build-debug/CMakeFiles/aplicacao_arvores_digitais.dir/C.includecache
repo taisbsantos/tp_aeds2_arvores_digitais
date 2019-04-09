@@ -13,6 +13,8 @@ stdio.h
 -
 sys/time.h
 -
+string.h
+-
 patricia.h
 /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.h
 

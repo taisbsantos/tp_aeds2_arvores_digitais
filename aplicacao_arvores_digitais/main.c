@@ -13,16 +13,17 @@ int main() {
     TipoPatNo *pat;
 
     inicializa_pat(&pat);
+    strcpy(nome_arquivo,"a.txt");
 
-    scanf("%s",nome_arquivo);
     arquivo = fopen(nome_arquivo, "r");
-    printf("depois do nome");
+
     if (arquivo == NULL) {
         printf("ERRO NA LEITURA");
     }
     while (fscanf(arquivo, "%s", palavra) != EOF) {
-
         int i=0;
+
+
         while (palavra[i])
         {
             if(isupper(palavra[i]))
@@ -31,12 +32,13 @@ int main() {
             }
             i++;
         }
-        Insere(palavra,&pat);
+
+        pat =Insere(palavra,pat);
+
     }
-
-
-
     fclose(arquivo);
+    Pesquisa("pablocleyton",pat);
+
     }
 
 

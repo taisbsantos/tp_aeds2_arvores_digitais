@@ -11,18 +11,19 @@ typedef struct TipoPatNo {
     union {
         struct {
             int posicao;
-            char Index;
+            char letra_palavra;
             struct TipoPatNo *Esq, *Dir;
         } NInterno ;
-char Chave ;
+        char palavra[50] ;
+
     } NO;
 } TipoPatNo;
 
 void inicializa_pat(TipoPatNo **no);
-char Bit(char i, char k);
-short EExterno(TipoPatNo ** p);
-TipoPatNo * CriaNoInt(int i, TipoPatNo **Esq,  TipoPatNo **Dir);
-TipoPatNo * CriaNoExt(char k);
-TipoPatNo * InsereEntre(char *k, TipoPatNo **t, int i);
-TipoPatNo * Insere(char *k, TipoPatNo **t);
-void Pesquisa(char *k, TipoPatNo **t);
+short EExterno(TipoPatNo * p);
+TipoPatNo * CriaNoInt(int i, char letra, TipoPatNo *Esq,  TipoPatNo *Dir);
+TipoPatNo * CriaNoExt(char *k);
+TipoPatNo * InsereEntre(char *k,TipoPatNo *t, int i, char letra);
+TipoPatNo * Insere(char *k, TipoPatNo *t);
+void Pesquisa(char *k, TipoPatNo *t);
+char max(char a, char b) ;
