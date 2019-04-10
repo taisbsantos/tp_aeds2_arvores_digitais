@@ -123,6 +123,33 @@ aplicacao_arvores_digitais/fast:
 	$(MAKE) -f CMakeFiles/aplicacao_arvores_digitais.dir/build.make CMakeFiles/aplicacao_arvores_digitais.dir/build
 .PHONY : aplicacao_arvores_digitais/fast
 
+lista_encadeada.o: lista_encadeada.c.o
+
+.PHONY : lista_encadeada.o
+
+# target to build an object file
+lista_encadeada.c.o:
+	$(MAKE) -f CMakeFiles/aplicacao_arvores_digitais.dir/build.make CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.o
+.PHONY : lista_encadeada.c.o
+
+lista_encadeada.i: lista_encadeada.c.i
+
+.PHONY : lista_encadeada.i
+
+# target to preprocess a source file
+lista_encadeada.c.i:
+	$(MAKE) -f CMakeFiles/aplicacao_arvores_digitais.dir/build.make CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.i
+.PHONY : lista_encadeada.c.i
+
+lista_encadeada.s: lista_encadeada.c.s
+
+.PHONY : lista_encadeada.s
+
+# target to generate assembly for a file
+lista_encadeada.c.s:
+	$(MAKE) -f CMakeFiles/aplicacao_arvores_digitais.dir/build.make CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.s
+.PHONY : lista_encadeada.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -240,6 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... aplicacao_arvores_digitais"
 	@echo "... edit_cache"
+	@echo "... lista_encadeada.o"
+	@echo "... lista_encadeada.i"
+	@echo "... lista_encadeada.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

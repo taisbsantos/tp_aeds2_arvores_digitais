@@ -105,7 +105,9 @@ void Pesquisa(char *k, TipoPatNo *t){
 }
 
 char max(char a, char b) {
-    return a > b ? a : b;
+    if(a>b)
+        return a;
+    else return b;
 }
 
 

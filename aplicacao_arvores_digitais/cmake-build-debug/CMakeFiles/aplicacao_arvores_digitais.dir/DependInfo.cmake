@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.c" "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.o"
   "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c" "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o"
   "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c" "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o"
   "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/pilha.c" "/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/pilha.c.o"

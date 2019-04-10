@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.c">
+			<Option target="aplicacao_arvores_digitais"/>
+		</Unit>
+		<Unit filename="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.h">
+			<Option target="aplicacao_arvores_digitais"/>
+		</Unit>
 		<Unit filename="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c">
 			<Option target="aplicacao_arvores_digitais"/>
 		</Unit>

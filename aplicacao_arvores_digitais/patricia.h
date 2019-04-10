@@ -1,6 +1,7 @@
 //
 // Created by tais on 4/5/19.
 //
+#include "lista_encadeada.h"
 
 typedef enum {
     Interno, Externo
@@ -15,6 +16,8 @@ typedef struct TipoPatNo {
             struct TipoPatNo *Esq, *Dir;
         } NInterno ;
         char palavra[50] ;
+        TipoLista lista_palavra;
+
 
     } NO;
 } TipoPatNo;
