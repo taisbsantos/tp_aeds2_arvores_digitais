@@ -2,7 +2,6 @@
 // A node of ternary search tree
 #define ALPHABET_SIZE 26
 #include<stdbool.h>
-#include "pilha.h"
 struct node {
     int data;
     struct node *array[26];

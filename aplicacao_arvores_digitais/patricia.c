@@ -7,14 +7,17 @@
 void inicializa_pat(TipoPatNo **no){
     *no=NULL;
 }
-TipoPatNo *Insere(char *k, TipoPatNo *t)
+TipoPatNo *Insere(char *k, TipoPatNo *t, int arquivoID)
 {
+    TipoLista lista;
     TipoPatNo *p;
     int i;
-
+    TipoPatNo *checagem;
     if (t == NULL){
+        printf("\n -->> ARVORE VAZIA");
+        //FLVazia(&lista);
+        return (CriaNoExt(k,&lista,arquivoID));
 
-        return (CriaNoExt(k));
     }else {
 
         p = t;
@@ -30,34 +33,51 @@ TipoPatNo *Insere(char *k, TipoPatNo *t)
 
         }
 
+
+        checagem = ChecagemPalavra(k,p);
+
+        //qtd++;
         for (i = 0; k[i]; i++) {
             if (k[i] != p->NO.palavra[i])
                 break;
         }
 
-        return (InsereEntre(k,t,i,max(k[i],p->NO.palavra[i])));
+        return (InsereEntre(k,t,i,max(k[i],p->NO.palavra[i]),&lista,checagem,arquivoID));
+
     }
-
-
 }
-TipoPatNo * InsereEntre(char *k, TipoPatNo *t, int i, char letra)
+
+
+TipoPatNo * InsereEntre(char *k, TipoPatNo *t, int i, char letra,TipoLista *lista,TipoPatNo *checagem,int arquivoId)
 {
 
     TipoPatNo *p = NULL;
     if (EExterno(t) || i < t->NO.NInterno.posicao)
     { /* cria um novo no externo */
-        p = CriaNoExt(k);
+        if(checagem!=0){
 
-        if (k[i]<letra)
-            return (CriaNoInt(i, letra, p, t));
-        else return (CriaNoInt(i,letra, t, p));
+            //Altera_lista_encadeada(&checagem->NO.lista_palavra.Ultimo->Item);
+
+            printf("\n - PALAVRA REPETINDO: %s\n",checagem->NO.palavra);
+            //printf("\n - Repete\n Palavra: %s\n qtd: %d\n",k,lista->Ultimo->Item.qtd);
+            //printf("\n---Repete---\n Palavra: %s\n qtd: ???\n IdDoc: %d\n------------\n",k,arquivoId);
+            return t;
+        }else{
+            p = CriaNoExt(k,lista,arquivoId);
+
+            if (k[i]<letra)
+                return (CriaNoInt(i, letra, p, t));
+            else return (CriaNoInt(i,letra, t, p));
+        }
+
+
     }
     else
     {
         if (k[t->NO.NInterno.posicao] >=t->NO.NInterno.letra_palavra)
-            t->NO.NInterno.Dir =  InsereEntre(k,t->NO.NInterno.Dir,i,letra);
+            t->NO.NInterno.Dir =  InsereEntre(k,t->NO.NInterno.Dir,i,letra,lista,checagem,arquivoId);
         else
-            t->NO.NInterno.Esq =  InsereEntre(k,t->NO.NInterno.Esq,i,letra);
+            t->NO.NInterno.Esq =  InsereEntre(k,t->NO.NInterno.Esq,i,letra,lista,checagem,arquivoId);
         return t;
     }
 
@@ -80,21 +100,35 @@ TipoPatNo * CriaNoInt(int i,char letra, TipoPatNo *Esq,  TipoPatNo *Dir)
     return p;
 }
 
-TipoPatNo * CriaNoExt(char *k)
+TipoPatNo * CriaNoExt(char *k,TipoLista *lista,int arquivoId)
 {
     TipoPatNo *p;
     p = (TipoPatNo*)malloc(sizeof(TipoPatNo));
     p->nt = Externo;
     strcpy(p->NO.palavra, k);
+    printf("\n------------\n Palavra: %s\n",p->NO.palavra);
+    FLVazia(lista);
+    Insere_lista_encadeada(lista->Ultimo->Item,lista,arquivoId);
 
+    //FLVazia(&p->NO.lista_palavra);
+    //Insere_lista_encadeada(lista->Ultimo->Item,lista);
     return p;
 }
+
+
+TipoPatNo * AlteraNo(TipoLista *lista,int arquivoId){
+    printf("aqui");
+}
+
+
+
 
 void Pesquisa(char *k, TipoPatNo *t){
     if (EExterno(t))
     { if (strcmp(k, t->NO.palavra)==0)
+            //printf("\nA palavra %s foi encontrada %d vezes\n",t->NO.palavra,t->NO.lista_palavra.Ultimo->Item.qtd);
             printf("\nA palavra %s foi encontrada\n",t->NO.palavra);
-      else printf("Elemento nao encontrado\n");
+        else printf("Elemento nao encontrado\n");
         return;
     }
     if(strlen(k) >= t->NO.NInterno.posicao && k[t->NO.NInterno.posicao] < (t)->NO.NInterno.letra_palavra){
@@ -104,10 +138,21 @@ void Pesquisa(char *k, TipoPatNo *t){
 
 }
 
+
+TipoPatNo *ChecagemPalavra(char *k, TipoPatNo *t){
+    if (EExterno(t)){
+        if (strcmp(k, t->NO.palavra)==0){
+            return t;
+        }else{
+            return 0;
+        }
+    }
+}
+
+
+
 char max(char a, char b) {
     if(a>b)
         return a;
     else return b;
 }
-
-

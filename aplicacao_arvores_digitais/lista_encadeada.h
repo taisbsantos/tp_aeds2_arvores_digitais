@@ -4,23 +4,24 @@
 
 typedef int TipoChave;
 
-typedef struct {
+typedef struct TipoItem{
     int qtd;
     int idDoc;
     /* outros componentes */
-} TipoItem;
+}TipoItem;
 
 typedef struct TipoCelula {
     TipoItem Item;
     struct TipoCelula *Prox;
 } TipoCelula;
 
-typedef struct {
+typedef struct TipoLista{
     TipoCelula *Primeiro, *Ultimo;
 } TipoLista;
 
 void FLVazia(TipoLista *Lista);
 int Vazia(TipoLista Lista);
-void Insere_lista_encadeada(TipoItem x, TipoLista *Lista);
+void Insere_lista_encadeada(TipoItem x, TipoLista *Lista,int arquivoId);
+void Altera_lista_encadeada(TipoItem *Lista);
 void Retira(TipoCelula *p, TipoLista *Lista, TipoItem *Item);
 void Imprime(TipoLista Lista);

@@ -3,41 +3,48 @@
 #include <string.h>
 #include "tst.h"
 #include "patricia.h"
-#include <sys/time.h>
 #include <ctype.h>
 
 
 int main() {
     FILE *arquivo;
     char nome_arquivo[20],palavra[50];
+    int arquivoId = 0;
     TipoPatNo *pat;
 
     inicializa_pat(&pat);
-    strcpy(nome_arquivo,"a.txt");
+
+
+    //printf("Nome arquivo: ");
+    //scanf("%s", nome_arquivo);
+    strcpy(nome_arquivo,"b.txt");
 
     arquivo = fopen(nome_arquivo, "r");
 
     if (arquivo == NULL) {
         printf("ERRO NA LEITURA");
-    }
-    while (fscanf(arquivo, "%s", palavra) != EOF) {
-        int i=0;
+    } else {
+        arquivoId += 1;
+        while (fscanf(arquivo, "%s", palavra) != EOF) {
+            int i = 0;
 
 
-        while (palavra[i])
-        {
-            if(isupper(palavra[i]))
-            {
-                palavra[i]=tolower(palavra[i]);
+            while (palavra[i]) {
+                if (isupper(palavra[i])) {
+                    palavra[i] = tolower(palavra[i]);
+                }
+                i++;
             }
-            i++;
+
+            pat = Insere(palavra, pat, arquivoId);
+
+            //printf("\n\n --> %s <--\n\n",pat->NO.palavra);
+
         }
-
-        pat =Insere(palavra,pat);
-
     }
+
     fclose(arquivo);
-    Pesquisa("pablocleyton",pat);
+    Pesquisa("lua", pat);
 
     }
 

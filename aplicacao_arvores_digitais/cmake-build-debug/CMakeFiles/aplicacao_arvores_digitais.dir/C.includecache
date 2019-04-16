@@ -6,17 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c
-stdlib.h
--
+C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/lista_encadeada.h
+
+C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/main.c
 stdio.h
 -
-sys/time.h
+stdlib.h
 -
 string.h
 -
+tst.h
+C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/tst.h
 patricia.h
-/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.h
+C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/patricia.h
+ctype.h
+-
 
-/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.h
+C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/patricia.h
+lista_encadeada.h
+C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/lista_encadeada.h
+
+C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/tst.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+tst.h
+C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/tst.h
+
+C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/tst.h
+stdbool.h
+-
 

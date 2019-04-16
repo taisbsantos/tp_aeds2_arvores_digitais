@@ -1,8 +1,8 @@
+#include "lista_encadeada.h"
+
 //
 // Created by tais on 4/5/19.
 //
-#include "lista_encadeada.h"
-
 typedef enum {
     Interno, Externo
 } TipoNo;
@@ -25,8 +25,9 @@ typedef struct TipoPatNo {
 void inicializa_pat(TipoPatNo **no);
 short EExterno(TipoPatNo * p);
 TipoPatNo * CriaNoInt(int i, char letra, TipoPatNo *Esq,  TipoPatNo *Dir);
-TipoPatNo * CriaNoExt(char *k);
-TipoPatNo * InsereEntre(char *k,TipoPatNo *t, int i, char letra);
-TipoPatNo * Insere(char *k, TipoPatNo *t);
+TipoPatNo * CriaNoExt(char *k,TipoLista *lista, int arquivoId);
+TipoPatNo * InsereEntre(char *k,TipoPatNo *t, int i, char letra,TipoLista *lista,TipoPatNo *checagem,int arquivoId);
+TipoPatNo * Insere(char *k, TipoPatNo *t, int arquivoID);
 void Pesquisa(char *k, TipoPatNo *t);
+TipoPatNo *ChecagemPalavra(char *k, TipoPatNo *t);
 char max(char a, char b) ;
