@@ -28,4 +28,5 @@ TipoPatNo * InsereEntre(char *k,TipoPatNo *t, int i, char letra,TipoLista *lista
 TipoPatNo * Insere(char *k, TipoPatNo *t, int arquivoID);
 void Pesquisa(char *k, TipoPatNo *t);
 TipoPatNo *ChecagemPalavra(char *k, TipoPatNo *t);
+void Busca(TipoPatNo *t);
 char max(char a, char b) ;

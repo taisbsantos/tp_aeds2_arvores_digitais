@@ -50,17 +50,19 @@ TipoPatNo *Insere(char *k, TipoPatNo *t, int arquivoID)
 
 TipoPatNo * InsereEntre(char *k, TipoPatNo *t, int i, char letra,TipoLista *lista,TipoPatNo *checagem,int arquivoId)
 {
-
+    TipoItem x;
     TipoPatNo *p = NULL;
     if (EExterno(t) || i < t->NO.NInterno.posicao)
     { /* cria um novo no externo */
         if (strcmp(k, t->NO.palavra)==0){
+            //Precisa dar um jeito de verificar qual o id se o id 
+            if(t->lista_palavra.Ultimo->Item.idDoc!=arquivoId){
+                x.idDoc=arquivoId;
+                x.qtd=1;
+                 Insere_lista_encadeada(&x,&t->lista_palavra);
+            }
+            else t->lista_palavra.Ultimo->Item.qtd++;
 
-            //Altera_lista_encadeada(&checagem->NO.lista_palavra.Ultimo->Item);
-            t->lista_palavra.Ultimo->Item.qtd++;
-            printf("\n - PALAVRA REPETINDO: %s\n",checagem->NO.palavra);
-            printf("\n - Repete\n Palavra: %s\n qtd: %d\n",k,t->lista_palavra.Ultimo->Item.qtd);
-            //printf("\n---Repete---\n Palavra: %s\n qtd: ???\n IdDoc: %d\n------------\n",k,arquivoId);
             return t;
         }else{
             p = CriaNoExt(k,lista,arquivoId);
@@ -102,23 +104,17 @@ TipoPatNo * CriaNoInt(int i,char letra, TipoPatNo *Esq,  TipoPatNo *Dir)
 
 TipoPatNo * CriaNoExt(char *k,TipoLista *lista,int arquivoId)
 {
-   TipoPatNo *p;
+    TipoPatNo *p;
     TipoItem item;
     p = (TipoPatNo*)malloc(sizeof(TipoPatNo));
     p->nt = Externo;
     strcpy(p->NO.palavra, k);
 
-    printf("\n------------\n Palavra: %s\n",p->NO.palavra);
     item.idDoc=arquivoId;
     item.qtd=1;
     FLVazia(&p->lista_palavra);
-    Insere_lista_encadeada(item,&p->lista_palavra);
+    Insere_lista_encadeada(&item,&p->lista_palavra);
     return p;
-}
-
-
-TipoPatNo * AlteraNo(TipoLista *lista,int arquivoId){
-    printf("aqui");
 }
 
 
@@ -156,4 +152,19 @@ char max(char a, char b) {
     if(a>b)
         return a;
     else return b;
+}
+void Busca(TipoPatNo *t){
+    if (EExterno(t))
+    { 
+            printf("\nA palavra %s foi encontrada\n",t->NO.palavra);
+            Imprime(t->lista_palavra);
+          
+    }
+
+    if( t->NO.NInterno.Dir!=NULL)
+        Busca(t->NO.NInterno.Esq);
+
+    if(t->NO.NInterno.Esq!=NULL)
+        Busca(t->NO.NInterno.Dir);
+
 }

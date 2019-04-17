@@ -22,15 +22,13 @@ int Vazia(TipoLista Lista)
 //    Lista -> Ultimo -> Prox = NULL;
 //}
 
-void Insere_lista_encadeada(TipoItem x, TipoLista *Lista)
+void Insere_lista_encadeada(TipoItem *x, TipoLista *Lista)
 { Lista -> Ultimo -> Prox = (TipoCelula*) malloc(sizeof(TipoCelula));
     Lista -> Ultimo = Lista -> Ultimo -> Prox;
 
-    Lista->Ultimo->Item.qtd = x.qtd;
-    Lista->Ultimo->Item.idDoc = x.idDoc;
-    printf(" qtd: %d\n IdDoc: %d\n------------\n",Lista->Ultimo->Item.qtd,Lista->Ultimo->Item.idDoc);
+    Lista->Ultimo->Item.qtd = (*x).qtd;
+    Lista->Ultimo->Item.idDoc =  (*x).idDoc;
     Lista -> Ultimo -> Prox = NULL;
-    //printf("%d",x.qtd);
 }
 
 
@@ -47,8 +45,10 @@ void Imprime(TipoLista Lista)
 { TipoCelula* Aux;
     Aux = Lista.Primeiro -> Prox;
     while (Aux != NULL)
-    { printf("%d\n", Aux -> Item.idDoc);
-        printf("%d\n", Aux -> Item.qtd);
+    { printf("id %d\n", Aux -> Item.idDoc);
+        printf(" qtd %d\n", Aux -> Item.qtd);
         Aux = Aux -> Prox;
+        printf("Onde ta o erro?\n");
     }
+    return;
 }
