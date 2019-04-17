@@ -11,7 +11,4 @@ add_executable(aplicacao_arvores_digitais
         main.c
         patricia.c
         patricia.h
-        pilha.c
-        pilha.h
-        tst.c
-        tst.h)
+        )

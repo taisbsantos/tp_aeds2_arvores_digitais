@@ -54,12 +54,12 @@ TipoPatNo * InsereEntre(char *k, TipoPatNo *t, int i, char letra,TipoLista *list
     TipoPatNo *p = NULL;
     if (EExterno(t) || i < t->NO.NInterno.posicao)
     { /* cria um novo no externo */
-        if(checagem!=0){
+        if (strcmp(k, t->NO.palavra)==0){
 
             //Altera_lista_encadeada(&checagem->NO.lista_palavra.Ultimo->Item);
-
+            t->lista_palavra.Ultimo->Item.qtd++;
             printf("\n - PALAVRA REPETINDO: %s\n",checagem->NO.palavra);
-            //printf("\n - Repete\n Palavra: %s\n qtd: %d\n",k,lista->Ultimo->Item.qtd);
+            printf("\n - Repete\n Palavra: %s\n qtd: %d\n",k,t->lista_palavra.Ultimo->Item.qtd);
             //printf("\n---Repete---\n Palavra: %s\n qtd: ???\n IdDoc: %d\n------------\n",k,arquivoId);
             return t;
         }else{
@@ -102,16 +102,17 @@ TipoPatNo * CriaNoInt(int i,char letra, TipoPatNo *Esq,  TipoPatNo *Dir)
 
 TipoPatNo * CriaNoExt(char *k,TipoLista *lista,int arquivoId)
 {
-    TipoPatNo *p;
+   TipoPatNo *p;
+    TipoItem item;
     p = (TipoPatNo*)malloc(sizeof(TipoPatNo));
     p->nt = Externo;
     strcpy(p->NO.palavra, k);
-    printf("\n------------\n Palavra: %s\n",p->NO.palavra);
-    FLVazia(lista);
-    Insere_lista_encadeada(lista->Ultimo->Item,lista,arquivoId);
 
-    //FLVazia(&p->NO.lista_palavra);
-    //Insere_lista_encadeada(lista->Ultimo->Item,lista);
+    printf("\n------------\n Palavra: %s\n",p->NO.palavra);
+    item.idDoc=arquivoId;
+    item.qtd=1;
+    FLVazia(&p->lista_palavra);
+    Insere_lista_encadeada(item,&p->lista_palavra);
     return p;
 }
 

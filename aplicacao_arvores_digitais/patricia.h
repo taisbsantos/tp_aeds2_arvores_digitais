@@ -9,6 +9,7 @@ typedef enum {
 
 typedef struct TipoPatNo {
     TipoNo nt;
+    TipoLista lista_palavra;
     union {
         struct {
             int posicao;
@@ -16,9 +17,6 @@ typedef struct TipoPatNo {
             struct TipoPatNo *Esq, *Dir;
         } NInterno ;
         char palavra[50] ;
-        TipoLista lista_palavra;
-
-
     } NO;
 } TipoPatNo;
 

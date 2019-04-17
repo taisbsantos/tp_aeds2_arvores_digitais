@@ -1,6 +1,3 @@
-//
-// Created by tais on 4/10/19.
-//
 
 #include "lista_encadeada.h"
 #include <sys/time.h>
@@ -25,18 +22,12 @@ int Vazia(TipoLista Lista)
 //    Lista -> Ultimo -> Prox = NULL;
 //}
 
-void Insere_lista_encadeada(TipoItem x, TipoLista *Lista,int arquivoId)
+void Insere_lista_encadeada(TipoItem x, TipoLista *Lista)
 { Lista -> Ultimo -> Prox = (TipoCelula*) malloc(sizeof(TipoCelula));
     Lista -> Ultimo = Lista -> Ultimo -> Prox;
-    /*if(checagem == 1){
-        printf("\n Repete - Aumenta 1\n");
-        Lista->Ultimo->Item.qtd = 2;
-    } else{
-        printf("\n Nao repete\n");
-        Lista->Ultimo->Item.qtd = 1;
-    }*/
-    Lista->Ultimo->Item.qtd = 1;
-    Lista->Ultimo->Item.idDoc = arquivoId;
+
+    Lista->Ultimo->Item.qtd = x.qtd;
+    Lista->Ultimo->Item.idDoc = x.idDoc;
     printf(" qtd: %d\n IdDoc: %d\n------------\n",Lista->Ultimo->Item.qtd,Lista->Ultimo->Item.idDoc);
     Lista -> Ultimo -> Prox = NULL;
     //printf("%d",x.qtd);

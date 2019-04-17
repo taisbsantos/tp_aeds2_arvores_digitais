@@ -17,7 +17,7 @@ int main() {
 
     //printf("Nome arquivo: ");
     //scanf("%s", nome_arquivo);
-    strcpy(nome_arquivo,"b.txt");
+    strcpy(nome_arquivo,"a.txt");
 
     arquivo = fopen(nome_arquivo, "r");
 

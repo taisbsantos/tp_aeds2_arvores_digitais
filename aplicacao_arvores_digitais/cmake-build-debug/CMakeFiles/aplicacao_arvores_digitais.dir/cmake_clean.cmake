@@ -1,13 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.obj"
-  "CMakeFiles/aplicacao_arvores_digitais.dir/main.c.obj"
-  "CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.obj"
-  "CMakeFiles/aplicacao_arvores_digitais.dir/pilha.c.obj"
-  "CMakeFiles/aplicacao_arvores_digitais.dir/tst.c.obj"
+  "CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.o"
+  "CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o"
+  "CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o"
   "aplicacao_arvores_digitais.pdb"
-  "aplicacao_arvores_digitais.exe"
-  "aplicacao_arvores_digitais.exe.manifest"
-  "libaplicacao_arvores_digitais.dll.a"
+  "aplicacao_arvores_digitais"
 )
 
 # Per-language clean rules from dependency scanning.

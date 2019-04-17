@@ -6,9 +6,19 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/lista_encadeada.h
+/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.c
+lista_encadeada.h
+/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.h
+sys/time.h
+-
+stdlib.h
+-
+stdio.h
+-
 
-C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/main.c
+/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.h
+
+/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c
 stdio.h
 -
 stdlib.h
@@ -16,27 +26,29 @@ stdlib.h
 string.h
 -
 tst.h
-C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/tst.h
+/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.h
 patricia.h
-C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/patricia.h
+/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.h
 ctype.h
 -
 
-C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/patricia.h
-lista_encadeada.h
-C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/lista_encadeada.h
-
-C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/tst.c
+/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c
+stdlib.h
+-
 stdio.h
 -
-stdlib.h
+sys/time.h
 -
 string.h
 -
-tst.h
-C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/tst.h
+patricia.h
+/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.h
 
-C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/tst.h
+/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.h
+lista_encadeada.h
+/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.h
+
+/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/tst.h
 stdbool.h
 -
 

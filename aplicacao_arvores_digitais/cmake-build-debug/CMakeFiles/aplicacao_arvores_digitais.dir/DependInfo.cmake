@@ -4,11 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/lista_encadeada.c" "C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.obj"
-  "C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/main.c" "C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/main.c.obj"
-  "C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/patricia.c" "C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.obj"
-  "C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/pilha.c" "C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/pilha.c.obj"
-  "C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/tst.c" "C:/Users/Yuri/Documents/tpAeds2/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/tst.c.obj"
+  "/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.c" "/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.o"
+  "/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c" "/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o"
+  "/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c" "/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
