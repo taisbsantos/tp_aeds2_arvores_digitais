@@ -29,4 +29,6 @@ TipoPatNo * Insere(char *k, TipoPatNo *t, int arquivoID);
 void Pesquisa(char *k, TipoPatNo *t);
 TipoPatNo *ChecagemPalavra(char *k, TipoPatNo *t);
 void Busca(TipoPatNo *t);
+void Consulta(TipoPatNo *arvore,int arquivoId);
+void Calcula_num_termos(TipoPatNo *arvore,int *qtd_termos,int arquivoId);
 char max(char a, char b) ;

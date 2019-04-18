@@ -45,10 +45,11 @@ void Imprime(TipoLista Lista)
 { TipoCelula* Aux;
     Aux = Lista.Primeiro -> Prox;
     while (Aux != NULL)
-    { printf("id %d\n", Aux -> Item.idDoc);
-        printf(" qtd %d\n", Aux -> Item.qtd);
+    { printf("IdDoc %d ", Aux -> Item.idDoc);
+        printf(" Quantidade %d ", Aux -> Item.qtd);
         Aux = Aux -> Prox;
-        printf("Onde ta o erro?\n");
+        
     }
+    printf("\n");
     return;
 }
