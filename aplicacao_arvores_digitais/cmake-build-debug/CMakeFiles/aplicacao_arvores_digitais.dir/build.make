@@ -43,10 +43,10 @@ RM = /opt/clion-2019.1/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais
+CMAKE_SOURCE_DIR = /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug
+CMAKE_BINARY_DIR = /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/aplicacao_arvores_digitais.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/aplicacao_arvores_digitais.dir/flags.make
 
 CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.o: CMakeFiles/aplicacao_arvores_digitais.dir/flags.make
 CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.o: ../lista_encadeada.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.o   -c /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.o   -c /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.c
 
 CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.c > CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.c > CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.i
 
 CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.c -o CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.c -o CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.s
 
 CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o: CMakeFiles/aplicacao_arvores_digitais.dir/flags.make
 CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o   -c /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o   -c /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c
 
 CMakeFiles/aplicacao_arvores_digitais.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/aplicacao_arvores_digitais.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c > CMakeFiles/aplicacao_arvores_digitais.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c > CMakeFiles/aplicacao_arvores_digitais.dir/main.c.i
 
 CMakeFiles/aplicacao_arvores_digitais.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/aplicacao_arvores_digitais.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c -o CMakeFiles/aplicacao_arvores_digitais.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c -o CMakeFiles/aplicacao_arvores_digitais.dir/main.c.s
 
 CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o: CMakeFiles/aplicacao_arvores_digitais.dir/flags.make
 CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o: ../patricia.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o   -c /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o   -c /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c
 
 CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c > CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c > CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.i
 
 CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c -o CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c -o CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.s
 
 # Object files for target aplicacao_arvores_digitais
 aplicacao_arvores_digitais_OBJECTS = \
@@ -110,7 +110,7 @@ aplicacao_arvores_digitais: CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o
 aplicacao_arvores_digitais: CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o
 aplicacao_arvores_digitais: CMakeFiles/aplicacao_arvores_digitais.dir/build.make
 aplicacao_arvores_digitais: CMakeFiles/aplicacao_arvores_digitais.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable aplicacao_arvores_digitais"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable aplicacao_arvores_digitais"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aplicacao_arvores_digitais.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +123,6 @@ CMakeFiles/aplicacao_arvores_digitais.dir/clean:
 .PHONY : CMakeFiles/aplicacao_arvores_digitais.dir/clean
 
 CMakeFiles/aplicacao_arvores_digitais.dir/depend:
-	cd /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug /home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug /home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/aplicacao_arvores_digitais.dir/depend
 

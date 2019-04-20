@@ -226,12 +226,9 @@ int Qtd_arquivos_por_palavra(TipoPatNo *arvore, char *palavra, int*tam){
      TipoCelula* Aux;
     if (EExterno(arvore))
     { 
-        if(strcmp(arvore->NO.NExterno.palavra,palavra)==0){
-           printf("%s\n",palavra);
-           printf("%d ",Tamanho_lista(arvore->lista_palavra));
+        if(strcmp(arvore->NO.NExterno.palavra,palavra)==0){     
            (*tam) =Tamanho_lista(arvore->lista_palavra);
-           printf("%d ",(*tam));
-           return (*tam);
+           
         }
     }
     if( arvore->NO.NInterno.Dir!=NULL)
@@ -239,5 +236,33 @@ int Qtd_arquivos_por_palavra(TipoPatNo *arvore, char *palavra, int*tam){
 
     if(arvore->NO.NInterno.Esq!=NULL)
             Qtd_arquivos_por_palavra(arvore->NO.NInterno.Dir,palavra,tam);
+
+return (*tam);
+}
+
+
+
+
+
+//quantas vezes a palavra aparece em determinado arquivo
+int Qtd_palavras_em_arquivo(TipoPatNo *arvore, char *palavra,int arquivoId)
+{ 
+     TipoCelula* Aux;
+    Aux = arvore->lista_palavra.Primeiro -> Prox;
+    printf("teste");
+    if (EExterno(arvore))
+    { 
+        if(strcmp(arvore->NO.NExterno.palavra,palavra)==0){
+            if(Aux->Item.idDoc==arquivoId)
+                return Aux->Item.qtd;
+            
+        }
+    }
+
+    if( arvore->NO.NInterno.Dir!=NULL)
+        Qtd_palavras_em_arquivo(arvore->NO.NInterno.Esq,palavra,arquivoId);
+
+    if(arvore->NO.NInterno.Esq!=NULL)
+        Qtd_palavras_em_arquivo(arvore->NO.NInterno.Dir,palavra,arquivoId);
 }
 

@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/. 
+C_INCLUDES = -I/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/. 
 

@@ -8,33 +8,33 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug"/>
+				<Option working_dir="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug"/>
+				<Option working_dir="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="aplicacao_arvores_digitais">
-				<Option output="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/aplicacao_arvores_digitais" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug"/>
+				<Option output="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/aplicacao_arvores_digitais" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/."/>
+					<Add directory="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/."/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -42,20 +42,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 aplicacao_arvores_digitais"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 aplicacao_arvores_digitais"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="aplicacao_arvores_digitais/fast">
-				<Option output="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/aplicacao_arvores_digitais" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug"/>
+				<Option output="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/aplicacao_arvores_digitais" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/."/>
+					<Add directory="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/."/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -63,39 +63,39 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 aplicacao_arvores_digitais/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 aplicacao_arvores_digitais/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug"/>
+				<Option working_dir="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.c">
+		<Unit filename="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.c">
 			<Option target="aplicacao_arvores_digitais"/>
 		</Unit>
-		<Unit filename="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.h">
+		<Unit filename="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/lista_encadeada.h">
 			<Option target="aplicacao_arvores_digitais"/>
 		</Unit>
-		<Unit filename="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c">
+		<Unit filename="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/main.c">
 			<Option target="aplicacao_arvores_digitais"/>
 		</Unit>
-		<Unit filename="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c">
+		<Unit filename="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.c">
 			<Option target="aplicacao_arvores_digitais"/>
 		</Unit>
-		<Unit filename="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.h">
+		<Unit filename="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/patricia.h">
 			<Option target="aplicacao_arvores_digitais"/>
 		</Unit>
-		<Unit filename="/home/tais/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/CMakeLists.txt">
+		<Unit filename="/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -75,8 +75,10 @@ int main() {
                     for(int i=0;i<total_palavras;i++){
                      printf("%s",termos[i].termo);
                       tam=0;
-                     printf("%d ", Qtd_arquivos_por_palavra(pat, termos[i].termo, &tam));
+                     printf(" APARECE EM %d  ARQUIVOS", Qtd_arquivos_por_palavra(pat, termos[i].termo, &tam));
                     }
+            Qtd_palavras_em_arquivo(pat, "quer",arquivoId);
+          // printf("A palavra aparece x vezes no documento y %d \n",);
         }
 
 

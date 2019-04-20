@@ -42,4 +42,5 @@ void Guarda_termos(TipoPatNo *arvore,int *total_palavras,Termos *termos);
 void Consulta(TipoPatNo *arvore,int arquivoId);
 void Calcula_num_termos(TipoPatNo *arvore,int *qtd_termos);
 int Qtd_arquivos_por_palavra(TipoPatNo *arvore, char *palavra, int *tam);
+int Qtd_palavras_em_arquivo(TipoPatNo *arvore, char *palavra,int arquivoId);
 char max(char a, char b) ;
