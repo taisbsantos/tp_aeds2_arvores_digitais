@@ -17,6 +17,7 @@ int main() {
     inicializa_pat(&pat);
     char opcao;
     while(opcao!='d'){
+     fflush(stdin);
      printf(" \n            MENU\n");
      printf("a) construir o índice invertido\n");
      printf("b) imprimir o índice invertido\n");
@@ -44,7 +45,15 @@ int main() {
                     i++;
                 }
 
-                pat = Insere(palavra, pat, arquivoId);
+               //verifico se a ultima posição da palavra é um sinal de pontuação se sim substituo por \0
+                int cont=strlen(palavra);
+                if((palavra[cont-1]>=33 && palavra[cont-1]<=47 )|| (palavra[cont-1]>=58 && palavra[cont-1]<=64)){
+                    palavra[cont-1]='\0';
+                   
+                }
+                strcpy(palavra_aux,palavra);
+
+                pat = Insere(palavra_aux, pat, arquivoId);
             }
             fclose(arquivo);
         }
@@ -53,7 +62,21 @@ int main() {
         }else if(opcao=='b'){
                 Busca(pat);
         }else if(opcao=='c'){
-                Consulta(pat,arquivoId);
+              //  Consulta(pat,arquivoId);
+            Termos termos[5];
+            int total_palavras=0, tam;
+                Guarda_termos(pat,&total_palavras,termos);
+                //Qtd_palavras_em_arquivo(TipoLista Lista,int arquivoId, char *palavra);
+                printf(" Total de palavras %d\n",total_palavras);
+               // printf("%d\n",Qtd_palavras_em_arquivo(pat,"casa",1));
+
+
+
+                    for(int i=0;i<total_palavras;i++){
+                     printf("%s",termos[i].termo);
+                      tam=0;
+                     printf("%d ", Qtd_arquivos_por_palavra(pat, termos[i].termo, &tam));
+                    }
         }
 
 

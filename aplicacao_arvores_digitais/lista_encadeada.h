@@ -24,3 +24,4 @@ int Vazia(TipoLista Lista);
 void Insere_lista_encadeada(TipoItem *x, TipoLista *Lista);
 void Retira(TipoCelula *p, TipoLista *Lista, TipoItem *Item);
 void Imprime(TipoLista Lista);
+int Tamanho_lista(TipoLista Lista);

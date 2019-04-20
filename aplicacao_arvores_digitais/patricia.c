@@ -37,11 +37,11 @@ TipoPatNo *Insere(char *k, TipoPatNo *t, int arquivoID)
 
         //qtd++;
         for (i = 0; k[i]; i++) {
-            if (k[i] != p->NO.palavra[i])
+            if (k[i] != p->NO.NExterno.palavra[i])
                 break;
         }
 
-        return (InsereEntre(k,t,i,max(k[i],p->NO.palavra[i]),&lista,checagem,arquivoID));
+        return (InsereEntre(k,t,i,max(k[i],p->NO.NExterno.palavra[i]),&lista,checagem,arquivoID));
 
     }
 }
@@ -53,7 +53,7 @@ TipoPatNo * InsereEntre(char *k, TipoPatNo *t, int i, char letra,TipoLista *list
     TipoPatNo *p = NULL;
     if (EExterno(t) || i < t->NO.NInterno.posicao)
     { /* cria um novo no externo */
-        if (strcmp(k, t->NO.palavra)==0){
+        if (strcmp(k, t->NO.NExterno.palavra)==0){
             //Precisa dar um jeito de verificar qual o id se o id 
             if(t->lista_palavra.Ultimo->Item.idDoc!=arquivoId){
                 x.idDoc=arquivoId;
@@ -107,7 +107,7 @@ TipoPatNo * CriaNoExt(char *k,TipoLista *lista,int arquivoId)
     TipoItem item;
     p = (TipoPatNo*)malloc(sizeof(TipoPatNo));
     p->nt = Externo;
-    strcpy(p->NO.palavra, k);
+    strcpy(p->NO.NExterno.palavra, k);
 
     item.idDoc=arquivoId;
     item.qtd=1;
@@ -121,9 +121,9 @@ TipoPatNo * CriaNoExt(char *k,TipoLista *lista,int arquivoId)
 
 void Pesquisa(char *k, TipoPatNo *t){
     if (EExterno(t))
-    { if (strcmp(k, t->NO.palavra)==0)
+    { if (strcmp(k, t->NO.NExterno.palavra)==0)
             //printf("\nA palavra %s foi encontrada %d vezes\n",t->NO.palavra,t->NO.lista_palavra.Ultimo->Item.qtd);
-            printf("\nA palavra %s foi encontrada\n",t->NO.palavra);
+            printf("\nA palavra %s foi encontrada\n",t->NO.NExterno.palavra);
         else printf("Elemento nao encontrado\n");
         return;
     }
@@ -137,7 +137,7 @@ void Pesquisa(char *k, TipoPatNo *t){
 
 TipoPatNo *ChecagemPalavra(char *k, TipoPatNo *t){
     if (EExterno(t)){
-        if (strcmp(k, t->NO.palavra)==0){
+        if (strcmp(k, t->NO.NExterno.palavra)==0){
             return t;
         }else{
             return 0;
@@ -155,7 +155,7 @@ char max(char a, char b) {
 void Busca(TipoPatNo *t){
     if (EExterno(t))
     { 
-            printf("\n %s ",t->NO.palavra);
+            printf("\n %s ",t->NO.NExterno.palavra);
             Imprime(t->lista_palavra);
           
     }
@@ -168,47 +168,76 @@ void Busca(TipoPatNo *t){
 
 }
 
-void Consulta(TipoPatNo *arvore,int arquivoId){
-
-    
-    char string_busca[100];
-    int total_palavras=1,i,qtd_termos[arquivoId];
-    //zera vetor qtd
-    for(i=0;i<arquivoId;i++){
-        qtd_termos[i]=0;
-    }
-
-
-    printf("O que voce deseja encontrar?\n");
-    scanf(" %100[^\n]",string_busca);
-    //quantas palavras tem a string de busca
-    for(i=0;i<strlen(string_busca);i++){
-        if(string_busca[i]==' ')
-            total_palavras++;
-    }
-    //quantidade de termos de cada arquivo
-    Calcula_num_termos(arvore,qtd_termos,arquivoId);
-      for(i=0;i<arquivoId;i++){
-        printf("%d\n",qtd_termos[i+1]);
-    }
-    printf("\n");
-
-}
-void Calcula_num_termos(TipoPatNo *arvore,int *qtd_termos,int arquivoId){
-TipoCelula* Aux;
+//Calcula quantas palavras tem em cada arquivo
+void Calcula_num_termos(TipoPatNo *arvore,int *qtd_termos){
+    TipoCelula* Aux;
     if (EExterno(arvore))
     { 
-            
         Aux = arvore->lista_palavra.Primeiro -> Prox;
+
         while (Aux != NULL) { 
-             qtd_termos[arquivoId-1]++;
+           //
+             qtd_termos[Aux->Item.idDoc-1]++;
              Aux = Aux -> Prox;
         }
+ printf("id %d\n",Aux->Item.idDoc);
     }
 
     if( arvore->NO.NInterno.Dir!=NULL)
-        Calcula_num_termos(arvore->NO.NInterno.Esq,qtd_termos,arquivoId);
+        Calcula_num_termos(arvore->NO.NInterno.Esq,qtd_termos);
 
     if(arvore->NO.NInterno.Esq!=NULL)
-        Calcula_num_termos(arvore->NO.NInterno.Dir,qtd_termos,arquivoId);
+        Calcula_num_termos(arvore->NO.NInterno.Dir,qtd_termos);
 }
+
+//pede os termos de pesquisa e conta quantas palavras foram pesquisadas
+void Guarda_termos(TipoPatNo *arvore,int *total_palavras,Termos *termos){
+
+    char string_busca[100],palavra[50];
+    int qtd_termos[5],j,i;
+    //zera vetor qtd
+    for(i=0;i<5;i++){
+        qtd_termos[i]=0;
+    }
+
+    printf("O que voce deseja encontrar?\n");
+    //pegando os termos de busca separadamente
+    j=0;
+    while (fscanf(stdin, "%s", palavra) ){
+        if(strcmp(palavra,"fim")==0)
+           return;
+       else{
+        strcpy(termos[j].termo,palavra);
+        //total de termos que a busca tem
+        (*total_palavras)++; 
+        j++;
+    
+       }
+     }
+//quantidade de termos de cada arquivo
+    Calcula_num_termos(arvore,qtd_termos);
+      for(i=0;i<10;i++){
+        printf(" %d\n",qtd_termos[i]);
+    }
+}
+
+//Em quantos arquivos cada palavra aparece
+int Qtd_arquivos_por_palavra(TipoPatNo *arvore, char *palavra, int*tam){
+     TipoCelula* Aux;
+    if (EExterno(arvore))
+    { 
+        if(strcmp(arvore->NO.NExterno.palavra,palavra)==0){
+           printf("%s\n",palavra);
+           printf("%d ",Tamanho_lista(arvore->lista_palavra));
+           (*tam) =Tamanho_lista(arvore->lista_palavra);
+           printf("%d ",(*tam));
+           return (*tam);
+        }
+    }
+    if( arvore->NO.NInterno.Dir!=NULL)
+        Qtd_arquivos_por_palavra(arvore->NO.NInterno.Esq,palavra,tam);
+
+    if(arvore->NO.NInterno.Esq!=NULL)
+            Qtd_arquivos_por_palavra(arvore->NO.NInterno.Dir,palavra,tam);
+}
+

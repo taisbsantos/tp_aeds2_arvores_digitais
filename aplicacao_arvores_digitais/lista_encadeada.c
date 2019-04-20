@@ -53,3 +53,19 @@ void Imprime(TipoLista Lista)
     printf("\n");
     return;
 }
+
+int Tamanho_lista(TipoLista Lista){
+    TipoCelula *aux;
+    if(Vazia(Lista))
+        return 0;
+
+    aux= Lista.Primeiro -> Prox;;
+    int tam = 0;
+
+    while(aux != NULL)
+    {
+        tam++;
+        aux = aux->Prox;
+    }
+    return tam;
+}
