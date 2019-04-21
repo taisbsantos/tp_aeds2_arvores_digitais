@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <sys/time.h>
 #include <string.h>
+#include <math.h>
 #include "patricia.h"
 
 void inicializa_pat(TipoPatNo **no){
@@ -245,24 +246,43 @@ return (*tam);
 
 
 //quantas vezes a palavra aparece em determinado arquivo
-int Qtd_palavras_em_arquivo(TipoPatNo *arvore, char *palavra,int arquivoId)
+int Qtd_palavras_em_arquivo(TipoPatNo *arvore, char *palavra,int arquivoId,int *qtd_pal_arq)
 { 
-     TipoCelula* Aux;
-    Aux = arvore->lista_palavra.Primeiro -> Prox;
-    printf("teste");
+
+    TipoCelula* Aux;
+    
+
     if (EExterno(arvore))
     { 
+        Aux = arvore->lista_palavra.Primeiro -> Prox;
         if(strcmp(arvore->NO.NExterno.palavra,palavra)==0){
-            if(Aux->Item.idDoc==arquivoId)
-                return Aux->Item.qtd;
+            if(Aux->Item.idDoc==arquivoId){
+                printf("qtd teste %d\n",Aux->Item.qtd );
+                (*qtd_pal_arq)=Aux->Item.qtd;
+               
+            }
             
         }
     }
 
     if( arvore->NO.NInterno.Dir!=NULL)
-        Qtd_palavras_em_arquivo(arvore->NO.NInterno.Esq,palavra,arquivoId);
+        Qtd_palavras_em_arquivo(arvore->NO.NInterno.Esq,palavra,arquivoId,qtd_pal_arq);
 
     if(arvore->NO.NInterno.Esq!=NULL)
-        Qtd_palavras_em_arquivo(arvore->NO.NInterno.Dir,palavra,arquivoId);
+        Qtd_palavras_em_arquivo(arvore->NO.NInterno.Dir,palavra,arquivoId,qtd_pal_arq);
+    return (*qtd_pal_arq);
+   
 }
 
+void ocorrencias(TipoPatNo *arvore,int num_docs, int total_palavras,Termos *termos,int *qtd_pal_arq){
+    double ocorrencias;
+    double vetor_ocorrencias[num_docs];
+    int i=0,j;
+    while(i<total_palavras){
+            for(j=0;j<num_docs;j++){
+                Qtd_palavras_em_arquivo(arvore,termos[j].termo,j+1,qtd_pal_arq);
+            }
+        i++;
+    }
+
+}

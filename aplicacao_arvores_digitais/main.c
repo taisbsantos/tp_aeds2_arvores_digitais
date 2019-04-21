@@ -56,6 +56,7 @@ int main() {
                 pat = Insere(palavra_aux, pat, arquivoId);
             }
             fclose(arquivo);
+        free(arquivo);
         }
     }
                 
@@ -64,24 +65,24 @@ int main() {
         }else if(opcao=='c'){
               //  Consulta(pat,arquivoId);
             Termos termos[5];
-            int total_palavras=0, tam;
+            int total_palavras=0, tam,qtd_pal_arq;
                 Guarda_termos(pat,&total_palavras,termos);
                 //Qtd_palavras_em_arquivo(TipoLista Lista,int arquivoId, char *palavra);
                 printf(" Total de palavras %d\n",total_palavras);
                // printf("%d\n",Qtd_palavras_em_arquivo(pat,"casa",1));
 
 
-
                     for(int i=0;i<total_palavras;i++){
                      printf("%s",termos[i].termo);
                       tam=0;
-                     printf(" APARECE EM %d  ARQUIVOS", Qtd_arquivos_por_palavra(pat, termos[i].termo, &tam));
+                     printf(" APARECE EM %d  ARQUIVOS",Qtd_arquivos_por_palavra(pat, termos[i].termo, &tam));
                     }
-            Qtd_palavras_em_arquivo(pat, "quer",arquivoId);
-          // printf("A palavra aparece x vezes no documento y %d \n",);
-        }
+            strcpy(palavra_aux,"quer");
+            
+          printf("A palavra aparece x vezes no documento y %d \n",Qtd_palavras_em_arquivo(pat, palavra_aux,arquivoId,&qtd_pal_arq));
+        
 
-
+}
     }
     
 return 0;
