@@ -1,3 +1,0 @@
-/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/aplicacao_arvores_digitais.dir
-/home/tais/Documents/tp_aeds_arvores_digitais/aplicacao_arvores_digitais/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -1,7 +1,10 @@
-//
-// Created by tais on 4/10/19.
-//
+/*   
+          AUTORES
+Élida Emelly  Matrícula: 3012
+Yuri de Faria Matrícula: 3373
+Taís B Santos Matricula: 3036
 
+*/
 typedef int TipoChave;
 
 typedef struct TipoItem{

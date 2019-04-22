@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/aplicacao_arvores_digitais.dir/lista_encadeada.c.o CMakeFiles/aplicacao_arvores_digitais.dir/main.c.o CMakeFiles/aplicacao_arvores_digitais.dir/patricia.c.o  -o aplicacao_arvores_digitais 

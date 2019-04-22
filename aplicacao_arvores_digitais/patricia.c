@@ -1,9 +1,15 @@
+/*   
+          AUTORES
+Élida Emelly  Matrícula: 3012
+Yuri de Faria Matrícula: 3373
+Taís B Santos Matricula: 3036
+
+*/
 #include<stdlib.h>
 #include <stdio.h>
 #include <sys/time.h>
 #include <string.h>
-#include <math.h>
-#include "patricia.h"
+#include "Libs/patricia.h"
 
 void inicializa_pat(TipoPatNo **no){
     *no=NULL;
@@ -15,14 +21,14 @@ TipoPatNo *Insere(char *k, TipoPatNo *t, int arquivoID)
     int i;
     TipoPatNo *checagem;
     if (t == NULL){
-        
+
         return (CriaNoExt(k,&lista,arquivoID));
 
     }else {
 
         p = t;
         while (!EExterno(p)) {
-
+//se a palavra que eu to enviando for maior que a posição da palavra na patricia e a letra da palavra for menor que a letra que está no nó manda pra esq, senão pra dir
             if (strlen(k) >= p->NO.NInterno.posicao && k[p->NO.NInterno.posicao] < (p)->NO.NInterno.letra_palavra) {
 
                 p = p->NO.NInterno.Esq;
@@ -36,7 +42,7 @@ TipoPatNo *Insere(char *k, TipoPatNo *t, int arquivoID)
 
         checagem = ChecagemPalavra(k,p);
 
-        //qtd++;
+        //for pra descobrir a posição duas palavras diferem
         for (i = 0; k[i]; i++) {
             if (k[i] != p->NO.NExterno.palavra[i])
                 break;
@@ -53,9 +59,10 @@ TipoPatNo * InsereEntre(char *k, TipoPatNo *t, int i, char letra,TipoLista *list
     TipoItem x;
     TipoPatNo *p = NULL;
     if (EExterno(t) || i < t->NO.NInterno.posicao)
-    { /* cria um novo no externo */
+    { 
+//se a palavra que eu to enviando é igual a palavra que esta no nó externo eu verifico se id do documento que eu to passando é diferente ao id que eu tenho na ultima celula da lista encadeada, se sim eu aloco uma nova celula dando 1 pra qtd da palavra e o id do documento, se o id é igual eu só acrescento 1 na variavel qtd da celula
         if (strcmp(k, t->NO.NExterno.palavra)==0){
-            //Precisa dar um jeito de verificar qual o id se o id 
+         
             if(t->lista_palavra.Ultimo->Item.idDoc!=arquivoId){
                 x.idDoc=arquivoId;
                 x.qtd=1;
@@ -86,7 +93,7 @@ TipoPatNo * InsereEntre(char *k, TipoPatNo *t, int i, char letra,TipoLista *list
 }
 
 short EExterno(TipoPatNo *p)
-{ /* Verifica se p^ e nodo externo */
+{
     return( p->nt == Externo);
 }
 
@@ -102,6 +109,7 @@ TipoPatNo * CriaNoInt(int i,char letra, TipoPatNo *Esq,  TipoPatNo *Dir)
     return p;
 }
 
+//Cria um nó externo e cria uma lista encadeada associada a cada palavra)
 TipoPatNo * CriaNoExt(char *k,TipoLista *lista,int arquivoId)
 {
     TipoPatNo *p;
@@ -146,42 +154,43 @@ TipoPatNo *ChecagemPalavra(char *k, TipoPatNo *t){
     }
 }
 
-
+//função que verifica qual letra é maior
 
 char max(char a, char b) {
     if(a>b)
         return a;
     else return b;
 }
+
+
 void Busca(TipoPatNo *t){
     if (EExterno(t))
-    { 
+    {
             printf("\n %s ",t->NO.NExterno.palavra);
             Imprime(t->lista_palavra);
-          
+            printf("\n");
     }
 
     if( t->NO.NInterno.Dir!=NULL)
         Busca(t->NO.NInterno.Esq);
-
     if(t->NO.NInterno.Esq!=NULL)
         Busca(t->NO.NInterno.Dir);
-
 }
 
-//Calcula quantas palavras tem em cada arquivo
+//Calcula quantas palavras tem em cada arquivo: percorro arvore e toda vez que é um nó esterno eu percorro a lista da palavra e somo mais um na posição correspondente ao arquivo. 
 void Calcula_num_termos(TipoPatNo *arvore,int *qtd_termos){
-    TipoCelula* Aux;
+
+     TipoCelula* Aux;
+
     if (EExterno(arvore))
     { 
-        Aux = arvore->lista_palavra.Primeiro -> Prox;
 
+        Aux = arvore->lista_palavra.Primeiro -> Prox;
         while (Aux != NULL) { 
-           //
              qtd_termos[Aux->Item.idDoc-1]++;
              Aux = Aux -> Prox;
         }
- printf("id %d\n",Aux->Item.idDoc);
+       
     }
 
     if( arvore->NO.NInterno.Dir!=NULL)
@@ -192,44 +201,43 @@ void Calcula_num_termos(TipoPatNo *arvore,int *qtd_termos){
 }
 
 //pede os termos de pesquisa e conta quantas palavras foram pesquisadas
-void Guarda_termos(TipoPatNo *arvore,int *total_palavras,Termos *termos){
+void Guarda_termos(TipoPatNo *arvore,int *total_palavras,Termos *termos, int *qtd_termos){
 
-    char string_busca[100],palavra[50];
-    int qtd_termos[5],j,i;
+    char string_busca[100],palavra[50],nome_arquivo[20];
+    FILE *arquivo;
+    int j,i;
     //zera vetor qtd
     for(i=0;i<5;i++){
         qtd_termos[i]=0;
     }
 
-    printf("O que voce deseja encontrar?\n");
-    //pegando os termos de busca separadamente
-    j=0;
-    while (fscanf(stdin, "%s", palavra) ){
-        if(strcmp(palavra,"fim")==0)
-           return;
-       else{
+    printf("O que voce deseja encontrar?(Entre com seu arquivo de busca)\n");
+    scanf("%s", nome_arquivo);
+    //pegando os termos de busca e guardando num vetor
+       arquivo = fopen(nome_arquivo, "r");
+       if (!arquivo) {
+            printf("ERRO NA LEITURA OU FIM DE LEITURA\n");
+        } else {
+            j=0;
+            while (fscanf(arquivo, "%s", palavra) != EOF) {
         strcpy(termos[j].termo,palavra);
         //total de termos que a busca tem
-        (*total_palavras)++; 
+        (*total_palavras)++;
         j++;
-    
-       }
-     }
-//quantidade de termos de cada arquivo
-    Calcula_num_termos(arvore,qtd_termos);
-      for(i=0;i<10;i++){
-        printf(" %d\n",qtd_termos[i]);
-    }
+            }
+        }
+
+
 }
 
 //Em quantos arquivos cada palavra aparece
 int Qtd_arquivos_por_palavra(TipoPatNo *arvore, char *palavra, int*tam){
      TipoCelula* Aux;
     if (EExterno(arvore))
-    { 
-        if(strcmp(arvore->NO.NExterno.palavra,palavra)==0){     
+    {
+        if(strcmp(arvore->NO.NExterno.palavra,palavra)==0){
            (*tam) =Tamanho_lista(arvore->lista_palavra);
-           
+
         }
     }
     if( arvore->NO.NInterno.Dir!=NULL)
@@ -247,21 +255,18 @@ return (*tam);
 
 //quantas vezes a palavra aparece em determinado arquivo
 int Qtd_palavras_em_arquivo(TipoPatNo *arvore, char *palavra,int arquivoId,int *qtd_pal_arq)
-{ 
+{
 
     TipoCelula* Aux;
-    
-
     if (EExterno(arvore))
-    { 
+    {
         Aux = arvore->lista_palavra.Primeiro -> Prox;
         if(strcmp(arvore->NO.NExterno.palavra,palavra)==0){
             if(Aux->Item.idDoc==arquivoId){
-                printf("qtd teste %d\n",Aux->Item.qtd );
                 (*qtd_pal_arq)=Aux->Item.qtd;
-               
+                    
             }
-            
+
         }
     }
 
@@ -271,18 +276,83 @@ int Qtd_palavras_em_arquivo(TipoPatNo *arvore, char *palavra,int arquivoId,int *
     if(arvore->NO.NInterno.Esq!=NULL)
         Qtd_palavras_em_arquivo(arvore->NO.NInterno.Dir,palavra,arquivoId,qtd_pal_arq);
     return (*qtd_pal_arq);
-   
+
 }
 
-void ocorrencias(TipoPatNo *arvore,int num_docs, int total_palavras,Termos *termos,int *qtd_pal_arq){
+void ocorrencias(TipoPatNo *arvore,int num_docs, int total_palavras,Termos *termos,int *qtd_pal_arq, int *tam,int arq_atual,double *vetor_ocorrencias){
     double ocorrencias;
-    double vetor_ocorrencias[num_docs];
-    int i=0,j;
-    while(i<total_palavras){
-            for(j=0;j<num_docs;j++){
-                Qtd_palavras_em_arquivo(arvore,termos[j].termo,j+1,qtd_pal_arq);
-            }
-        i++;
+
+    int j,qtd_pal_arquivos,qtd_arq_pal;
+
+        for(j=0;j<total_palavras;j++){
+
+             qtd_pal_arquivos = Qtd_palavras_em_arquivo(arvore,termos[j].termo,arq_atual,qtd_pal_arq);
+            // printf(" qtd %d ",qtd_pal_arquivos);
+             qtd_arq_pal = Qtd_arquivos_por_palavra(arvore, termos[j].termo, tam);
+             ocorrencias=qtd_pal_arquivos*(log(num_docs)/qtd_arq_pal);
+           //  printf("ocorr %lf \n",ocorrencias);
+            //ate a linha acima funciona
+            vetor_ocorrencias[arq_atual-1] = vetor_ocorrencias[arq_atual-1] + ocorrencias;
+        }
+}
+
+void relevancia (TipoPatNo *arvore,int num_docs, int total_palavras,Termos *termos,int *qtd_pal_arq, int *tam, int *qtd_termos){
+ int i;
+ double vetor_ocorrencias[num_docs],vetor_relevancia[num_docs];
+  for(i=0;i<num_docs;i++){
+    vetor_ocorrencias[i]=0;
+  }
+//para cada arquivo eu chamo a função de ocorrencia
+  for(i=0;i<num_docs;i++){
+       ocorrencias(arvore,num_docs,total_palavras,termos,qtd_pal_arq,tam,i+1, vetor_ocorrencias);
+  }
+
+  Calcula_num_termos(arvore,qtd_termos);
+//para cada documento eu calculo a relevancia
+  for(i=0;i<num_docs;i++){
+        float a=1;
+        vetor_relevancia[i]=(a/qtd_termos[i])*vetor_ocorrencias[i];
+  }
+
+
+int vetor[num_docs],
+      x = 0,
+      y = 0,
+      aux = 0;      
+  //Aqui preenche-se um vetor com o numero dos documentos existentes
+  for( x = 0; x < num_docs; x++ ) 
+  {
+    
+    vetor[x] = x+1;
+  }
+  /*Aqui usa-se um bubble sorte pra ordenar as relevancias, mas se a ordenação fosse do próprio vetor de relevancia se perderia qual é o documento relacionado a determinada  relevancia, então a comparação é feita usando o vetor de relevancia, mas a troca ocorre num vetor auxiliar que foi preenchido anteriormente com o numero
+dos documentos
+  */   
+ 
+
+  // coloca em ordem crescente (1,2,3,4,5...)  
+  for( x = 0; x < num_docs; x++ )
+  {
+    for( y = x + 1; y < num_docs; y++ ) // sempre 1 elemento à frente
+    {
+      // se o (x > (x+1)) então o x passa pra frente (ordem crescente)
+      if ( vetor_relevancia[x] > vetor_relevancia[y] )
+      {
+         aux = vetor[x];
+         vetor[x] = vetor[y];
+         vetor[y] = aux;
+      }
     }
+  } // fim da ordenação
+  
+  // exibe elementos ordenados   
+  
+  for( x = 0; x < num_docs; x++ )
+  {
+    printf("\nTexto %d",vetor[x]); // exibe o vetor ordenado
+  }  
+  
+
+
 
 }
