@@ -1,5 +1,0 @@
-MAIN: #include "tst.c"
-PILHA.c: #include "pilha.h"
-PILHA.h: -----------------
-TST.c: #include "tst.h"
-TST.h: #include "pilha.c"
