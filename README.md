@@ -1,10 +1,5 @@
 # tp_aeds_arvores_digitais
 
-          AUTORES
-Élida Emelly  Matrícula: 3012
-Yuri de Faria Matrícula: 3373
-Taís B Santos Matricula: 3036
-
 
 Códigos usado de base para a trie:
 https://ucoder.com.br/tutorials/arvore-busca-ternaria
