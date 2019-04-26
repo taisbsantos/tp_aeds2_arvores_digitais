@@ -19,3 +19,4 @@ gcc -o tp main.c patricia.c lista_encadeada.c -lm
 Arquivos criados por nós para testes:
 lista1.txt
 lista2.txt
+
