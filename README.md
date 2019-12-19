@@ -10,6 +10,7 @@ Para utilizar o projeto é necessário:
 Comando de exemplo utilizando o GCC: 
 
 `gcc -o tp main.c patricia.c lista_encadeada.c -lm`
+
 `./tp`
 
 
